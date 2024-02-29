@@ -184,7 +184,8 @@
 % 重定义参考文献样式，来自thu
 \makeatletter
 \renewenvironment{thebibliography}[1]{
-   \chapter*{\centering\bibname}
+   \titleformat{\chapter}{\raggedright\sihao\hei}{\chaptername}{2em}{}
+   \chapter*{\bibname}
    \wuhao\song
    \list{\@biblabel{\@arabic\c@enumiv}}
         {\renewcommand{\makelabel}[1]{##1\hfill}
@@ -211,9 +212,9 @@
 \setlength{\bibhang}{2em}         % 每个条目自第二行起缩进的距离
 
 % 参考文献引用作为上标出现
-%\newcommand{\citeup}[1]{\textsuperscript{\cite{#1}}}
+% \newcommand{\citeup}[1]{\textsuperscript{\cite{#1}}}
 \makeatletter
-    \def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
+\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa ,#2\fi}]}}
 \makeatother
 %% 引用格式
 \bibpunct{[}{]}{,}{s}{}{,}
@@ -240,7 +241,7 @@
 
 \pagestyle{fancy}
   \fancyhf{}
-  \fancyhead[C]{\song\xiaowu \@cheading}  % 页眉显示天津大学 20XX 届本科生毕业论文
+  \fancyhead[C]{\song\xiaowu \@cheading}  % 页眉显示山东大学本科生毕业论文
   \fancyfoot[C]{\xiaowu ~\thepage~}
 \newlength{\@title@width}
 
