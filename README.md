@@ -49,7 +49,7 @@ LaTeX 加本模板可以实现：
 
 ## 插图与表格
 
-参考文档与模板示例。建议图像使用`.eps`矢量格式，放入 `figures` 目录下。
+参考文档与模板示例。建议图像使用`.eps`矢量格式，放入 `figures` 目录下。当然其他格式图像完全可以。
 
 插图示例：
 
@@ -108,11 +108,11 @@ LaTeX 加本模板可以实现：
 
 # 关于本魔改
 
-本魔改适用于 texlive 2020，使用 `xelatex->bibtex->xelatex->xelatex` 编译链。在 macOS, Windows 10 下进行修改与测试，无法完全保证其它平台的正常使用。希望 Linux 用户踊跃反馈。
+本魔改适用于 texlive 2020，使用 `xelatex->bibtex->xelatex->xelatex` 编译链。在 macOS, Windows 10 下进行修改与测试，无法完全保证其它平台的正常使用。
 
 ## 魔改内容
 
-* 天大 logo 更新及矢量校名
+* 山大logo
 * 移除 CJK，使用 ctex
 * 根据现行本科生毕业论文规范修改格式
 * 适应 macOS, Windows 与 xelatex
@@ -120,8 +120,10 @@ LaTeX 加本模板可以实现：
 
 ## 编译
 
-> - 编译操作**在 `tjumain.tex` 所在目录下进行**
+> - 编译操作**在 `sdumain.tex` 所在目录下进行**
 > - 以下编译方式任选其一即可
+> - 以下方法适用于Latex大佬或者热爱配置环境的同学。如果懒得配置环境可以直接注册overleaf账号，导入项目在线编辑即可。
+> - 使用overleaf的同学读到这就可以了。
 
 ### 使用`Latexmk`编译
 
@@ -134,10 +136,10 @@ latexmk -pvc -xelatex -file-line-error -interaction=nonstopmode -synctex=1 tjuma
 **依次运行**以下四条命令：
 
 ```bash
-xelatex tjumain.tex
-bibtex tjumain.aux
-xelatex tjumain.tex
-xelatex tjumain.tex
+xelatex sdumain.tex
+bibtex sdumain.aux
+xelatex sdumain.tex
+xelatex sdumain.tex
 ```
 
 注意：由于存在目录、参考文献和图表编号等，需要多次编译以保证顺序正确。
